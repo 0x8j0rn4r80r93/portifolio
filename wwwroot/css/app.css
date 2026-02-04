@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    height: 100%;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-container {
+    max-width: 600px;
+    padding: 2rem;
+}
+
+header {
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #888888;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #222222;
+    transition: all 0.2s ease;
+    display: block;
+}
+
+.links a:hover {
+    color: #ffffff;
+    padding-left: 1rem;
+    border-bottom-color: #ffffff;
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.links a:hover .arrow {
+    transform: translateX(5px);
+}
+
+footer {
+    text-align: center;
+    color: #555555;
+    font-size: 0.9rem;
+}
+
+.loading-progress {
+    position: absolute;
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    inset: 20vh 0 auto 0;
+    margin: 0 auto;
+}
+
+.loading-progress circle {
+    fill: none;
+    stroke: #333333;
+    stroke-width: 0.6rem;
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+}
+
+.loading-progress circle:last-child {
+    stroke: #e0e0e0;
+    stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+    transition: stroke-dasharray 0.05s ease-in-out;
+}
+
+.loading-progress-text {
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    color: #e0e0e0;
+    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+}
+
+.loading-progress-text:after {
+    content: var(--blazor-load-percentage-text, "Loading");
+}
+
+#blazor-error-ui {
+    background: #1a1a1a;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(255, 255, 255, 0.1);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    color: #ff6b6b;
+    border-top: 1px solid #ff6b6b;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+    color: #ff6b6b;
+}
+
+.blazor-error-boundary {
+    background: #1a1a1a;
+    padding: 1rem;
+    color: #ff6b6b;
+    border: 1px solid #ff6b6b;
+}
+
+.blazor-error-boundary::after {
+    content: "An error has occurred."
+}
