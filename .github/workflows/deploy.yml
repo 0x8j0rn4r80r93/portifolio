@@ -26,14 +26,8 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
-      - name: Restore dependencies
-        run: dotnet restore
-
-      - name: Build
-        run: dotnet build --no-restore
-
       - name: Publish
-        run: dotnet publish --no-build --configuration Release --output publish
+        run: dotnet publish Portifolio.csproj --configuration Release --output publish
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
