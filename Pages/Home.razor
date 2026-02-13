@@ -1,29 +1,31 @@
 ﻿@page "/"
 
-<PageTitle>Portfolio</PageTitle>
+<PageTitle>Portifolio - Bjørnar Borge</PageTitle>
 
-<div class="portfolio-container">
-    <header>
-        <h1>Bjørnar Borge</h1>
-        <p class="subtitle">Developer / Writer / Creator</p>
-    </header>
-
-    <section class="links">
-        <a href="https://www.linkedin.com/in/0x8j0rn4r80r93/" target="_blank" rel="noopener noreferrer">
-            <span class="arrow">→</span> LinkedIn
-        </a>
-        <a href="https://github.com/0x8j0rn4r80r93" target="_blank" rel="noopener noreferrer">
-            <span class="arrow">→</span> GitHub
-        </a>
-        <a href="https://substack.com/@@0x8j0rn4r80r93" target="_blank" rel="noopener noreferrer">
-            <span class="arrow">→</span> Substack
-        </a>
-        <a href="https://medium.com/@@0x8j0rn4r80r93" target="_blank" rel="noopener noreferrer">
-            <span class="arrow">→</span> Medium
-        </a>
-    </section>
-
-    <footer>
-        <p>© @DateTime.Now.Year</p>
-    </footer>
+<div class="terminal-container">
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="terminal-button close"></span>
+                <span class="terminal-button minimize"></span>
+                <span class="terminal-button maximize"></span>
+            </div>
+            <div class="terminal-title">Terminal</div>
+        </div>
+        <div class="terminal-body">
+            <div id="output" class="terminal-output">
+                <div class="welcome-text">
+                    <p>Welcome to Bjørnar Borge's Portfolio Terminal [Version 1.0.0]</p>
+                    <p>(c) @DateTime.Now.Year Bjørnar Borge. All rights reserved.</p>
+                    <br/>
+                    <p>Type '<span class="command-highlight">help</span>' for available commands.</p>
+                    <br/>
+                </div>
+            </div>
+            <div class="terminal-input-line">
+                <span class="prompt">bjornar@@portfolio:~$</span>
+                <input type="text" id="terminal-input" class="terminal-input" autofocus autocomplete="off" spellcheck="false" />
+            </div>
+        </div>
+    </div>
 </div>

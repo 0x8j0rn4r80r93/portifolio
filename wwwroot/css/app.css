@@ -5,10 +5,11 @@
 }
 
 html, body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #0a0a0a;
-    color: #e0e0e0;
+    font-family: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    color: #00ff00;
     height: 100%;
+    overflow: hidden;
 }
 
 .page {
@@ -16,67 +17,210 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
-.portfolio-container {
-    max-width: 600px;
-    padding: 2rem;
+/* Terminal Container */
+.terminal-container {
+    width: 100%;
+    max-width: 900px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-header {
-    margin-bottom: 3rem;
-}
-
-h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 0.5rem;
-}
-
-.subtitle {
-    font-size: 1rem;
-    color: #888888;
-}
-
-.links {
+.terminal-window {
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    border: 2px solid #00ff00;
+    box-shadow: 0 20px 60px rgba(0, 255, 0, 0.3),
+                0 0 20px rgba(0, 255, 0, 0.2),
+                inset 0 0 20px rgba(0, 255, 0, 0.05);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 3rem;
+    overflow: hidden;
+    animation: terminalGlow 2s ease-in-out infinite alternate;
 }
 
-.links a {
-    color: #e0e0e0;
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid #222222;
-    transition: all 0.2s ease;
-    display: block;
+@keyframes terminalGlow {
+    from { 
+        box-shadow: 0 20px 60px rgba(0, 255, 0, 0.3),
+                    0 0 20px rgba(0, 255, 0, 0.2),
+                    inset 0 0 20px rgba(0, 255, 0, 0.05);
+        border-color: #00ff00;
+    }
+    to { 
+        box-shadow: 0 20px 60px rgba(0, 255, 0, 0.4),
+                    0 0 30px rgba(0, 255, 0, 0.3),
+                    inset 0 0 20px rgba(0, 255, 0, 0.08);
+        border-color: #00ff88;
+    }
 }
 
-.links a:hover {
-    color: #ffffff;
-    padding-left: 1rem;
-    border-bottom-color: #ffffff;
+/* Terminal Header */
+.terminal-header {
+    background: linear-gradient(180deg, #2d2d2d 0%, #252525 100%);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #00ff00;
 }
 
-.arrow {
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-buttons span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
     display: inline-block;
-    transition: transform 0.2s ease;
 }
 
-.links a:hover .arrow {
-    transform: translateX(5px);
+.btn-close {
+    background-color: #ff5f56;
+    box-shadow: 0 0 5px rgba(255, 95, 86, 0.5);
 }
 
-footer {
+.btn-minimize {
+    background-color: #ffbd2e;
+    box-shadow: 0 0 5px rgba(255, 189, 46, 0.5);
+}
+
+.btn-maximize {
+    background-color: #27c93f;
+    box-shadow: 0 0 5px rgba(39, 201, 63, 0.5);
+}
+
+.terminal-title {
+    flex: 1;
     text-align: center;
-    color: #555555;
-    font-size: 0.9rem;
+    color: #00ff00;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
+.terminal-logo {
+    font-size: 6px;
+    line-height: 1;
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    margin: 0;
+}
+
+/* Terminal Body */
+.terminal-body {
+    flex: 1;
+    background-color: #0a0a0a;
+    padding: 20px;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.terminal-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border-radius: 5px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb:hover {
+    background: #00cc00;
+}
+
+.welcome-banner {
+    color: #00ff00;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* Input Line */
+.input-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.prompt {
+    color: #00ff00;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.terminal-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #00ff00;
+    font-family: inherit;
+    font-size: inherit;
+    caret-color: #00ff00;
+}
+
+.terminal-input::selection {
+    background: rgba(0, 255, 0, 0.3);
+}
+
+/* Output */
+.output {
+    color: #00ff00;
+}
+
+.output pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.command-line {
+    margin-bottom: 10px;
+}
+
+.command {
+    color: #00ccff;
+}
+
+.error {
+    color: #ff5555;
+}
+
+.success {
+    color: #00ff00;
+}
+
+.info {
+    color: #ffff55;
+}
+
+.link {
+    color: #ff79c6;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: #ff92d0;
+    text-shadow: 0 0 10px rgba(255, 121, 198, 0.5);
+}
+
+/* Loading Progress */
 .loading-progress {
     position: absolute;
     display: block;
@@ -88,14 +232,14 @@ footer {
 
 .loading-progress circle {
     fill: none;
-    stroke: #333333;
+    stroke: #1a1a1a;
     stroke-width: 0.6rem;
     transform-origin: 50% 50%;
     transform: rotate(-90deg);
 }
 
 .loading-progress circle:last-child {
-    stroke: #e0e0e0;
+    stroke: #00ff00;
     stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
     transition: stroke-dasharray 0.05s ease-in-out;
 }
@@ -104,26 +248,26 @@ footer {
     position: absolute;
     text-align: center;
     font-weight: bold;
-    color: #e0e0e0;
+    color: #00ff00;
     inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
 }
 
 .loading-progress-text:after {
-    content: var(--blazor-load-percentage-text, "Loading");
+    content: var(--blazor-load-percentage-text, "Initializing...");
 }
 
 #blazor-error-ui {
     background: #1a1a1a;
     bottom: 0;
-    box-shadow: 0 -1px 2px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -1px 2px rgba(255, 0, 0, 0.3);
     display: none;
     left: 0;
     padding: 0.6rem 1.25rem 0.7rem 1.25rem;
     position: fixed;
     width: 100%;
     z-index: 1000;
-    color: #ff6b6b;
-    border-top: 1px solid #ff6b6b;
+    color: #ff5555;
+    border-top: 1px solid #ff5555;
 }
 
 #blazor-error-ui .dismiss {
@@ -131,16 +275,56 @@ footer {
     position: absolute;
     right: 0.75rem;
     top: 0.5rem;
-    color: #ff6b6b;
+    color: #ff5555;
 }
 
 .blazor-error-boundary {
     background: #1a1a1a;
     padding: 1rem;
-    color: #ff6b6b;
-    border: 1px solid #ff6b6b;
+    color: #ff5555;
+    border: 1px solid #ff5555;
 }
 
 .blazor-error-boundary::after {
     content: "An error has occurred."
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page {
+        padding: 5px;
+    }
+    
+    .terminal-container {
+        height: 98vh;
+        max-width: 100%;
+        max-height: none;
+    }
+    
+    .terminal {
+        border-radius: 0;
+    }
+    
+    .terminal-title {
+        font-size: 11px;
+    }
+    
+    .terminal-body {
+        font-size: 12px;
+        padding: 10px;
+    }
+    
+    .prompt {
+        font-size: 12px;
+    }
+    
+    .terminal-input {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 769px) {
+    .terminal-container {
+        max-width: 1000px;
+    }
 }
