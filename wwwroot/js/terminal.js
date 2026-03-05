@@ -30,17 +30,32 @@ const commands = {
         description: 'About Bjørnar Borge',
         action: () => {
             return `
-<div class="output-line">╔══════════════════════════════════════════════════╗</div>
-<div class="output-line">║                                                  ║</div>
-<div class="output-line">║      Bjørnar Borge - Developer Profile           ║</div>
-<div class="output-line">║                                                  ║</div>
-<div class="output-line">║  Role: Developer / Writer / Creator             ║</div>
-<div class="output-line">║                                                  ║</div>
-<div class="output-line">║  Passionate about technology, writing, and       ║</div>
-<div class="output-line">║  creating innovative solutions. Connect with     ║</div>
-<div class="output-line">║  me on social platforms to follow my journey!    ║</div>
-<div class="output-line">║                                                  ║</div>
-<div class="output-line">╚══════════════════════════════════════════════════╝</div>
+<pre style="line-height: 1.4; margin: 0;">╔════════════════════════════════════════════════════╗
+║                                                    ║
+║                 <span style="color: #00ffff; font-weight: bold;">Bjørnar Borge</span>                      ║
+║  DevOps/DevSecOps Engineer & Cybersecurity MSc     ║
+║                                                    ║
+╠════════════════════════════════════════════════════╣
+║                                                    ║
+║ <span style="color: #50fa7b;">CURRENT ROLE</span>                                       ║
+║  DevOps Engineer at Xledger Labs AS                ║
+║  Leading Security Champions Program                ║
+║  2023 - Present                                    ║
+║                                                    ║
+║ <span style="color: #50fa7b;">EDUCATION</span>                                          ║
+║  MSc Cyber Security - NTNU Gjøvik (2023-2027)      ║
+║  BSc IT & Information Systems - USN                ║
+║  Winner: Bachelor of the Year in IT                ║
+║                                                    ║
+║ <span style="color: #50fa7b;">EXPERTISE</span>                                          ║
+║  DevOps/DevSecOps, Cyber Security, Cloud           ║
+║  System Integration, Database Management           ║
+║  Ethical Hacking, Network Security, Forensics      ║
+║                                                    ║
+║ <span style="color: #ffb86c;">Connect to discuss tech, security & innovation!</span>    ║
+║ Type '<span style="color: #ff79c6;">links</span>' for social profiles                   ║
+║                                                    ║
+╚════════════════════════════════════════════════════╝</pre>
             `;
         }
     },
