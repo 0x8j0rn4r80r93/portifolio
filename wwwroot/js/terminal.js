@@ -174,21 +174,27 @@ const commands = {
         description: 'Show a friendly bear',
         action: () => {
             return `
-<div class="output-line" style="text-align: center;">&nbsp;</div>
-<div class="output-line" style="text-align: center;">         ʕ•ᴥ•ʔ</div>
-<div class="output-line" style="text-align: center;">     .--.      .--.</div>
-<div class="output-line" style="text-align: center;">    : (&#92;&#92; ". _......_ ." /) :</div>
-<div class="output-line" style="text-align: center;">     '.    &#96;        &#96;    .'</div>
-<div class="output-line" style="text-align: center;">      /'   _      _   &#96;&#92;&#92;</div>
-<div class="output-line" style="text-align: center;">     /     0}      {0     &#92;&#92;</div>
-<div class="output-line" style="text-align: center;">    |       /      &#92;&#92;       |</div>
-<div class="output-line" style="text-align: center;">    |     /'        &#96;&#92;&#92;     |</div>
-<div class="output-line" style="text-align: center;">     &#92;&#92;   | .  .==.  . |   /</div>
-<div class="output-line" style="text-align: center;">      '._ &#92;&#92;.' &#92;&#92;__/ './ _.'</div>
-<div class="output-line" style="text-align: center;">      /  &#96;&#96;'._-''-_.&#96;&#96;  &#92;&#92;</div>
-<div class="output-line" style="text-align: center;">&nbsp;</div>
-<div class="output-line" style="text-align: center; color: #ffff55; font-size: 16px;">🐻 Rawr! Have a great day! 🐻</div>
-<div class="output-line" style="text-align: center;">&nbsp;</div>
+<div class="output-line">&nbsp;</div>
+<pre style="color: #00ff00; line-height: 1.2;">
+  _,-""\`""-~\`)
+(\`~_,=========\\
+ |---,___.-.__,\\
+ |        o     \\ ___  _,,,,_     _.--.  
+  \\      \`^\`    /\`_.-"~      \`~-;\`     \\
+   \\_      _  .'                 \`,     |
+     |\`-                           \'__/
+    /                      ,_       \\  \`'-.
+   /    .-""~~--.            \`"-,   ;_    /
+  |              \\               \\  | \`""\`
+   \\__.--'\`"-.   /_               |'
+              \`"\`  \`~~~---..,     |
+                             \\ _.-'\`-.
+                              \\       \\
+                               '.     /
+                                 \`"~"\`
+</pre>
+<div class="output-line" style="color: #ffff55; font-size: 16px;">🐻 Rawr! Have a great day! 🐻</div>
+<div class="output-line">&nbsp;</div>
             `;
         }
     }
